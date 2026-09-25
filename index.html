@@ -29,7 +29,7 @@
 
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKK35GL5"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         
         <header>
@@ -47,7 +47,7 @@
                         <li><a href="about.html">About us</a></li>
                         <li><a href="index.html#best-sellers-section">Best Sellers</a></li>
                         <li><a href="index.html#newsletter-section">Newsletter</a></li>
-                        <li class="menu-icon"><img src="images/menu_icon.png" ></li>
+                        <li class="menu-icon"><img src="images/menu_icon.webp" alt="Menu Icon"></li>
                     </ul>
                 </nav>
             </div>
@@ -55,10 +55,12 @@
         
         <section class="hero">
 
-            <img class="desktop" src="images/Hero_Desktop.webp" alt="Hero Desktop">
-            <img class="mobile" src="images/Hero_Mobile.webp" alt="Hero Mobile">
-            <img class="tablet" src="images/Hero_Tablet.webp" alt="Hero Tablet">
-
+            <picture>
+             
+                <source srcset="images/Hero_Mobile.webp" media="(max-width: 576px)">
+                <source srcset="images/Hero_Tablet.webp" media="(max-width: 960px)">
+                <img src="images/Hero_Desktop.webp" alt="Hero Desktop">
+            </picture>
            
             <div class="hero-content">
                 <div class="container">
