@@ -5,10 +5,9 @@ async function loadProducts() {
 }
 
 function displayProducts(products) {
-	// Find the container where products will be displayed
 	const container = document.querySelector("#all-products .container");
+	const fragment = document.createDocumentFragment();
 
-	// Iterate over each product and create the HTML structure safely
 	products.forEach((product) => {
 		// Create the main product div
 		const productElement = document.createElement("div");
@@ -56,27 +55,30 @@ function displayProducts(products) {
 		productElement.appendChild(pictureDiv);
 		productElement.appendChild(infoDiv);
 
-		// Append the new product element to the container
-		container.appendChild(productElement);
+		fragment.appendChild(productElement);
 	});
+
+	container.appendChild(fragment);
 }
 
-window.onload = () => {
-	let status = "idle";
+function watchProductsSection() {
 	const productSection = document.querySelector("#all-products");
+	if (!productSection) return;
 
-	window.onscroll = () => {
-		const position =
-			productSection.getBoundingClientRect().top -
-			(window.scrollY + window.innerHeight);
-
-		if (status === "idle" && position <= 0) {
-			status = "fetching";
+	const observer = new IntersectionObserver(
+		(entries, currentObserver) => {
+			if (!entries[0]?.isIntersecting) return;
+			currentObserver.disconnect();
 			loadProducts();
-			// Simulate heavy operation. It could be a complex price calculation.
-			for (let i = 0; i < 10000000; i++) {
-				const _temp = Math.sqrt(i) * Math.sqrt(i);
-			}
-		}
-	};
-};
+		},
+		{ rootMargin: "0px 0px 200px 0px" }
+	);
+
+	observer.observe(productSection);
+}
+
+if (document.readyState === "complete") {
+	watchProductsSection();
+} else {
+	window.addEventListener("load", watchProductsSection, { once: true });
+}
