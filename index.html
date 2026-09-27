@@ -15,7 +15,7 @@
           href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap"
           rel="stylesheet"
           media="print"
-          onload="this.media='all'"
+          data-apply-css
         >
         <noscript>
             <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap" rel="stylesheet">
@@ -99,7 +99,7 @@
             }
         </style>
         <link rel="preload" as="style" href="/css/styles.css">
-        <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="/css/styles.css" media="print" data-apply-css>
         <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
         <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
     </head>
@@ -166,7 +166,8 @@
             </div>
         </section>
 
-        <section class="country-bar hidden">
+        <section class="country-bar">
+            <p>Orders to <b>France</b> are subject to <b>20%</b> VAT</p>
         </section>
 
         <section class="best-sellers" id="best-sellers-section">
