@@ -61,9 +61,22 @@ function displayProducts(products) {
 	});
 }
 
-loadProducts();
+window.onload = () => {
+	let status = "idle";
+	const productSection = document.querySelector("#all-products");
 
-// Simulate heavy operation. It could be a complex price calculation.
-for (let i = 0; i < 10000000; i++) {
-	const _temp = Math.sqrt(i) * Math.sqrt(i);
-}
+	window.onscroll = () => {
+		const position =
+			productSection.getBoundingClientRect().top -
+			(window.scrollY + window.innerHeight);
+
+		if (status === "idle" && position <= 0) {
+			status = "fetching";
+			loadProducts();
+			// Simulate heavy operation. It could be a complex price calculation.
+			for (let i = 0; i < 10000000; i++) {
+				const _temp = Math.sqrt(i) * Math.sqrt(i);
+			}
+		}
+	};
+};
