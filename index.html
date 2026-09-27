@@ -100,19 +100,6 @@
         <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
         <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
         <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
-        <!-- Google Tag Manager -->
-        <script>((w,d,s,l,i)=> {w[l]=w[l]||[];w[l].push({'gtm.start':Date.now(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!=='dataLayer'?`&l=${l}`:'';j.async=true;j.src=
-            `https://www.googletagmanager.com/gtm.js?id=${i}${dl}`;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PKK35GL5');
-        </script>
-        <!-- End Google Tag Manager -->
-
-        
-        <script type="text/javascript" charset="UTF-8">
-            cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Performance Course"});
-        </script>
-              
     </head>
 
     <body>
@@ -296,25 +283,43 @@
 
         <script type="text/javascript" defer src="js/main.js"></script>
         <script type="text/javascript" defer src="js/products.js"></script>
-       <!-- no final do body, depois do conteúdo visível -->
-<script defer src="js/cookie-consent.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (window.cookieconsent) {
-      cookieconsent.run({
-        notice_banner_type: "simple",
-        consent_type: "express",
-        palette: "light",
-        language: "en",
-        page_load_consent_levels: ["strictly-necessary"],
-        notice_banner_reject_button_hide: false,
-        preferences_center_close_button_hide: false,
-        page_refresh_confirmation_buttons: false,
-        website_name: "Performance Course"
-      });
-    }
-  });
-</script>
+        <script defer src="js/cookie-consent.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            if (window.cookieconsent) {
+              cookieconsent.run({
+                notice_banner_type: "simple",
+                consent_type: "express",
+                palette: "light",
+                language: "en",
+                page_load_consent_levels: ["strictly-necessary"],
+                notice_banner_reject_button_hide: false,
+                preferences_center_close_button_hide: false,
+                page_refresh_confirmation_buttons: false,
+                website_name: "Performance Course"
+              });
+            }
+          });
+
+          function loadGoogleTagManager() {
+            if (window.gtmLoaded) return;
+            window.gtmLoaded = true;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-PKK35GL5";
+            document.body.appendChild(script);
+          }
+
+          window.addEventListener("load", () => {
+            if ("requestIdleCallback" in window) {
+              requestIdleCallback(loadGoogleTagManager, { timeout: 4000 });
+            } else {
+              setTimeout(loadGoogleTagManager, 2000);
+            }
+          });
+        </script>
 
     </body>
 
