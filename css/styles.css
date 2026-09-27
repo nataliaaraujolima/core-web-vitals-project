@@ -142,7 +142,7 @@ section.hero img {
 	width: 220px;
 	max-width: 100%;
 	border-radius: 92px;
-	background-color: #33c6dd;
+	background-color: #0d6f82;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 700;
@@ -155,9 +155,9 @@ section.hero img {
 }
 
 .hero-content button:hover {
-	color: #33c6dd;
+	color: #0d6f82;
 	background-color: #fff;
-	border: 1px solid #33c6dd;
+	border: 1px solid #0d6f82;
 }
 
 section.country-bar {
@@ -254,7 +254,7 @@ section.best-sellers .product-slider .product .product-info {
 }
 
 section.best-sellers .product-slider .product .product-info .categories {
-	color: #33c6dd;
+	color: #0d6f82;
 	font-weight: normal;
 	font-size: 14px;
 	letter-spacing: 0.35px;
@@ -297,7 +297,7 @@ section.best-sellers
 	.product-info
 	.price
 	.original-price {
-	color: #9b9b9b;
+	color: #595959;
 	font-weight: normal;
 	font-size: 16px;
 	letter-spacing: 0.4px;
