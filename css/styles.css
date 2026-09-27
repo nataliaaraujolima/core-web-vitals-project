@@ -178,7 +178,7 @@ section.best-sellers {
 	padding-top: 80px;
 }
 
-section.best-sellers h1 {
+section.best-sellers h2 {
 	text-align: center;
 	font-size: 34px;
 	letter-spacing: 0.85px;
@@ -333,7 +333,7 @@ section.newsletter {
 	margin: 80px auto;
 }
 
-section.newsletter h3 {
+section.newsletter h2 {
 	font-size: 24px;
 	letter-spacing: 0.6px;
 	line-height: 42px;
@@ -495,7 +495,7 @@ footer .copyright-text {
 		padding-top: 50px;
 	}
 
-	section.best-sellers h1 {
+	section.best-sellers h2 {
 		font-size: 28px;
 		letter-spacing: 0.7px;
 		line-height: 38px;
@@ -571,7 +571,7 @@ footer .copyright-text {
 		margin: 50px auto;
 	}
 
-	section.newsletter h3 {
+	section.newsletter h2 {
 		font-size: 22px;
 		letter-spacing: 0.55px;
 		line-height: 42px;
@@ -644,7 +644,7 @@ footer .copyright-text {
 		max-width: 360px;
 	}
 
-	section.best-sellers h1 {
+	section.best-sellers h2 {
 		font-size: 36px;
 		letter-spacing: 0.6px;
 		line-height: 38px;
