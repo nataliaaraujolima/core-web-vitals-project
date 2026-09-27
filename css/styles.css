@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: "Heebo";
+	font-family: "Heebo", system-ui, "Segoe UI", sans-serif;
 	padding-top: 80px;
 }
 

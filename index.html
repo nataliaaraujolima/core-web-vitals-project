@@ -10,18 +10,11 @@
         <meta name="description" content="Shop VR headsets from Apple, PlayStation, and Oculus. Discover best sellers and subscribe to deals at VR Headsets.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap">
-        <link
-          href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap"
-          rel="stylesheet"
-          media="print"
-          data-apply-css
-        >
         <noscript>
             <link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap" rel="stylesheet">
         </noscript>
         <style>
-            body { margin: 0; font-family: "Heebo", sans-serif; padding-top: 80px; }
+            body { margin: 0; font-family: system-ui, "Segoe UI", sans-serif; padding-top: 80px; }
             .container { width: 1440px; max-width: 90%; margin: auto; padding: 0 16px; }
             ul { margin: 0; padding: 0; }
             header {
@@ -138,18 +131,18 @@
                 </nav>
             </div>
         </header>
-        
-        <section class="hero">
+
+        <main>
 
             <picture>
-                <source srcset="images/Hero_Mobile.webp" width="576" height="576" media="(max-width: 576px)">
-                <source srcset="images/Hero_Tablet.webp" width="960" height="770" media="(max-width: 960px)">
-                <source srcset="images/Hero_1280.webp" width="1335" height="622" media="(max-width: 1400px)">
+                <source srcset="images/Hero_Desktop.webp" width="1919" height="893" media="(min-width: 1401px)">
+                <source srcset="images/Hero_1280.webp" width="1335" height="622" media="(min-width: 961px)">
+                <source srcset="images/Hero_Tablet.webp" width="960" height="770" media="(min-width: 577px)">
                 <img
-                  src="images/Hero_Desktop.webp"
-                  alt="Hero Desktop"
-                  width="1919"
-                  height="893"
+                  src="images/Hero_Mobile.webp"
+                  alt="VR headset"
+                  width="576"
+                  height="576"
                   fetchpriority="high"
                 >
               </picture>
@@ -248,6 +241,7 @@
                 <button type="submit">Subscribe</button>
             </form>
         </section>
+        </main>
 
         <footer>
             <div class="bottom-nav">
