@@ -132,7 +132,7 @@
 
             <picture>
              
-                <source srcset="images/Hero_Mobile.webp" width="576px" height="576px" media="(max-width: 576px)">
+                <source srcset="images/Hero_Mobile.webp" fetchpriority="high" width="576px" height="576px" media="(max-width: 576px)">
                 <source srcset="images/Hero_Tablet.webp" width="960px" height="770px" media="(max-width: 960px)">
                 <img src="images/Hero_Desktop.webp" alt="Hero Desktop" width="1919px" height="893px">
             </picture>
@@ -277,7 +277,7 @@
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/products.js"></script>
        <!-- no final do body, depois do conteúdo visível -->
-<script defer src="https://www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js"></script>
+<script defer src="js/cookie-consent.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     if (window.cookieconsent) {
