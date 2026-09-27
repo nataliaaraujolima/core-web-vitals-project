@@ -1,7 +1,43 @@
 {
 	"headers": [
 		{
-			"source": "/js/cookie-consent.js",
+			"source": "/",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, s-maxage=60, stale-while-revalidate=86400"
+				}
+			]
+		},
+		{
+			"source": "/index.html",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, s-maxage=60, stale-while-revalidate=86400"
+				}
+			]
+		},
+		{
+			"source": "/css/(.*)",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=31536000, immutable"
+				}
+			]
+		},
+		{
+			"source": "/js/(.*)",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=31536000, immutable"
+				}
+			]
+		},
+		{
+			"source": "/images/(.*)",
 			"headers": [
 				{
 					"key": "Cache-Control",
