@@ -323,14 +323,13 @@
             script.async = true;
             script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-PKK35GL5";
             document.body.appendChild(script);
+            ["pointerdown", "scroll", "keydown", "touchstart"].forEach((eventName) => {
+              window.removeEventListener(eventName, loadGoogleTagManager, { passive: true });
+            });
           }
 
-          window.addEventListener("load", () => {
-            if ("requestIdleCallback" in window) {
-              requestIdleCallback(loadGoogleTagManager, { timeout: 4000 });
-            } else {
-              setTimeout(loadGoogleTagManager, 2000);
-            }
+          ["pointerdown", "scroll", "keydown", "touchstart"].forEach((eventName) => {
+            window.addEventListener(eventName, loadGoogleTagManager, { passive: true, once: true });
           });
         </script>
 
